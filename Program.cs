@@ -1,4 +1,11 @@
 ﻿using FoodOrderingSystem.Models;
 
-var u = new User(1, "Alihan", "alihan@example.com");
-Console.WriteLine($"User: {u.Name} - {u.Email}");
+var c = new Customer(
+    2,
+    "Alihan",
+    "alihan@example.com",
+    "Istanbul",
+    "0555 000 00 00"
+);
+
+Console.WriteLine($"{c.Name} - {c.Address} - {c.Phone}");
