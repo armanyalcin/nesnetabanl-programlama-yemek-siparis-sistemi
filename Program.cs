@@ -1,11 +1,7 @@
 ﻿using FoodOrderingSystem.Models;
 
-var c = new Customer(
-    2,
-    "Alihan",
-    "alihan@example.com",
-    "Istanbul",
-    "0555 000 00 00"
-);
+var item1 = new MenuItem(1, "Tavuk Dürüm", 120, "Dürüm");
+var item2 = new MenuItem(2, "Ayran", 25, "İçecek");
 
-Console.WriteLine($"{c.Name} - {c.Address} - {c.Phone}");
+Console.WriteLine(item1);
+Console.WriteLine(item2);
