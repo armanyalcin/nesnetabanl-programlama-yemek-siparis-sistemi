@@ -9,6 +9,8 @@ namespace FoodOrderingSystem.Models
         public int Id { get; set; }
         public Customer Customer { get; private set; }
         public Restaurant Restaurant { get; private set; }
+        public PaymentMethod Payment { get; private set; }
+
 
         public List<MenuItem> Items { get; private set; }
 
@@ -44,6 +46,16 @@ namespace FoodOrderingSystem.Models
                 }
             }
         }
+
+        public void MakePayment(PaymentMethod paymentMethod)
+{
+    Payment = paymentMethod;
+
+    double total = CalculateTotal();
+    paymentMethod.Pay(total);
+
+    OdemeAlindi();
+}
 
         public double CalculateTotal()
         {
